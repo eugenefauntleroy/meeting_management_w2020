@@ -20,7 +20,7 @@ class MeetingMinutes(models.Model):
     minutes = models.TimeField()
     
     def __str___(self):
-        return self.minutes
+        return self.meetingid 
     
     class Meta:
         db_table = 'meeting minutes'
@@ -33,7 +33,7 @@ class Resource(models.Model):
     userid = models.ManyToManyField(User)
 
     def __str__(self):
-        return self.resource
+        return self.resourcename
     
     class Meta:
         db_table = 'resource'
@@ -46,7 +46,7 @@ class Event(models.Model):
     userid = models.ManyToManyField(User)
 
     def __str__(self):
-        return self.event
+        return self.eventtitle
     
     class Meta:
         db_table = 'event'
