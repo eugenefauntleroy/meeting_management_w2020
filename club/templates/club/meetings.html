@@ -3,8 +3,8 @@
 <h2>Meetings</h2>
 <ul>
     {% for m in meeting_title %}
-    <li>{{ m.meetingdate }}</li>
-    {% endfor %}
-</ul>
+    <li>{{m.meetingtitle }}  {{m.meetingdate}} </li>
+    {%endfor%}
+<ul>
 
 {% endblock %}
