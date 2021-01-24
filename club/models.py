@@ -24,6 +24,7 @@ class MeetingMinutes(models.Model):
     
     class Meta:
         db_table = 'meeting minutes'
+        verbose_name_plural='meeting minutes'
 
 class Resource(models.Model):
     resourcename = models.CharField(max_length=255)
