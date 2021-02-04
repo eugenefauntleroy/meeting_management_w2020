@@ -3,8 +3,8 @@
 <h2>Meetings</h2>
 <ul>
     {% for m in meetingtitle %}
-    <li>{{m.meetingtitle }}  {{m.meetingdate}} </li>
+    <li><a href="{% url 'detail' id=m.id %}">{{m.meetingtitle }}:  {{m.meetingdate}}</a> </li>
     {%endfor%}
-<ul>
+</ul>
 
 {% endblock %}
