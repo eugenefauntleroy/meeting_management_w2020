@@ -1,5 +1,5 @@
 # pythonclub_w2020
-## Django project for IT2020
+## Django project for IT112
 
 ## Project scope: The content of this application is still yet to be determined
 
