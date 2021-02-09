@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import meeting
 # Create your models here.
 class Meeting(models.Model):
     meetingtitle = models.CharField(max_length=255)
@@ -7,6 +7,13 @@ class Meeting(models.Model):
     meetingtime = models.TimeField()
     location = models.CharField(max_length=255)
     agenda = models.CharField(max_length=255)
+
+    def meetingduration(self):
+        self.duration=models.TimeField()
+        return self.duration
+     
+    def meetingbudget(self):
+        self.meetingbudget=models.CharField(max_length=255)
 
     def __str__(self):
         return self.meetingtitle
