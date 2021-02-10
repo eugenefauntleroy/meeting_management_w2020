@@ -15,7 +15,6 @@ class MeetingTest(TestCase):
 
 class DateTest(TestCase):
     def setup(self):
-        self.meeting=Meeting(meetingtitle='First')
         self.user=User(username='user1')
         self.meeting= Meeting(meetingtitle='First', meetingdate=self.date, user=self.user, meetingtime=meetingtime.time('2021/1/10'), location='Seattle', agenda='N/A')
     
