@@ -16,7 +16,7 @@ class MeetingTest(TestCase):
 class DateTest(TestCase):
     def setup(self):
         self.user=User(username='user1')
-        self.meeting= Meeting(meetingtitle='First', user=self.user, meetingtime=meetingtime.time('2021/1/10'), location='Seattle', agenda='N/A')
+        self.meeting= Meeting(meetingtitle='First', user=self.user, meetingdate=self.date('2021/1/10'), meetingtime=meetingtime.time('00:00:00'), location='Seattle', agenda='N/A')
     
     def test_string(self):
         self.assertEqual(str(self.meeting), 'First')
