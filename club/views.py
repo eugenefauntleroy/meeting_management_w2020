@@ -14,7 +14,7 @@ def meetingdetail(request, id):
     meeting=get_object_or_404(Meeting, pk=id) #"Meeting" is capitalized
     return render(request, 'club/meetingdetail.html', {'meeting' : meeting})
 
-def new_meeting(request):
+def newMeeting(request):
     form=meetingForm
 
     if request.method=='POST':
