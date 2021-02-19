@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block contet %}
+<h2>Add Meeting</h2>
+<table class='table'>
+    <form method="POST", class="post-form">{% csrf_token %}
+        {{form.as_table}}
+</table>
+<button type="submit" class="btn btn-default">Save</button>
+</form>
+{% endblock %}
