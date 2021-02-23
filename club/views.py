@@ -26,7 +26,8 @@ def newMeeting(request):
     
     else:
         form=meetingForm()
-    return render(request,'club/meetings.html', {'form' : form})
+    return render(request,'club/newmeeting.html', {'form' : form})
+    #2/21 - this is what made the form to show up 
 
 
     
