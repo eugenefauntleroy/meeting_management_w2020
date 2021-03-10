@@ -17,7 +17,7 @@ class MeetingTest(TestCase):
 class DateTest(TestCase):
     def setup(self):
         self.user=User(username='user1')
-        self.meeting=Meeting(meetingtitle='First', user=self.user, meetingdate=self.date('2021,1,10'), meetingtime=self.time('00:00:00'), location='Seattle', agenda='N/A')
+        self.meeting=Meeting()
         #self.meeting=Meeting(meetingdate=self.date('2021,1,10')
     def test_string(self):  
         self.assertEqual(str(self.meeting),'First')
@@ -39,7 +39,7 @@ class TestMeetingForm(TestCase):
             'meetinglocation': 'Seattle'
         })
         self.assertTrue(form.is_valid)
-
+'''
     def test_productform_invalid(self):
         form=meetingForm(data={            
             'meetingtitle':'mcqueen', 
@@ -47,8 +47,14 @@ class TestMeetingForm(TestCase):
             'meetinglocation': 'Seattle'
         })
         self.assertFalse(form.is_valid)
-
-
-
+'''
+class New_product_Authentication_Test(TestCase):
+    def setUp(self):
+        self.test_user=User.objects.create_user(username='testuser1', password='P@ssword1')
+        self.meeting.club=Type.objects.create(meetingname='meeting')
+        self.meeting=Meeting.objects.create(meetingtitle='First', user=self.user, meetingdate=self.date('2021,1,10'), meetingtime=self.time('00:00:00'), location='Seattle', agenda='N/A')                                                                                                                                                                                               meetingtitle='First', user=test+user, meetingdate=self.date('2021,1,10'), meetingtime=self.time('00:00:00'), location='Seattle', agenda='N/A')
+    def test_redirect_if_not_logged _in(self):
+        response=self.client.get(reverse)
+        self.assertRedirects(response, 'accounts/login/?next=/club/newmeeting/')
  
  
